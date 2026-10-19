@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <title>participation activity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e6e8;
+            /* Soft Baby Pink */
+            color: #5c3a21;
+            /* Warm Brown */
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #5c3a21;
+            text-align: center;
+        }
+
+        form {
+            background-color: #e3eae1;
+            /* Sage Green */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #8fbc8f;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            background-color: #5c3a21;
+            /* Warm Brown */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #422917;
+        }
+
+        #output {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px dashed #8fbc8f;
+            /* Sage border */
+            min-height: 80px;
+        }
+
+        .member-badge {
+            display: inline-block;
+            background-color: #f7e6e8;
+            /* Baby Pink */
+            color: #5c3a21;
+            padding: 6px 12px;
+            margin: 4px;
+            border-radius: 15px;
+            border: 1px solid #5c3a21;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Overbooked book club</h1>
+
+    <form>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Athena">
+
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" placeholder="Alfaro">
+
+        <input type="button" value="Add Member" py-click="getname">
+    </form>
+
+    <h3>MEMBERS:</h3>
+    <div id="output">
+        <!-- Python set results will render here -->
+    </div>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+
+</html>
